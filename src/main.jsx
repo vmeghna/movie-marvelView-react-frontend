@@ -19,7 +19,7 @@ import SearchResult from "./pages/searchResult/SearchResult.jsx";
 import Explore from "./pages/explore/Explore.jsx";
 import Login from "./components/Login.jsx";
 import PageNotFound from "./pages/404/pageNotFound.jsx";
-import Signup from "./components/SignUp.jsx";
+import SignUp from "./components/SignUp.jsx";
 import { useUser } from "./components/UserContext.jsx";
 // import PrivateRoute from "./components/PrivateRoute.jsx";
 
@@ -44,7 +44,7 @@ const router = createBrowserRouter(
       />
 
       <Route path="/Login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
+      <Route path="/signUp" element={<SignUp />} />
 
       <Route path="*" element={<PageNotFound />} />
     </Route>
