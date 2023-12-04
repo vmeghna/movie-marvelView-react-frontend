@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./style.scss";
-// import pageNotFound from "../404/pageNotFound";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 
 const pageNotFound = () => {
