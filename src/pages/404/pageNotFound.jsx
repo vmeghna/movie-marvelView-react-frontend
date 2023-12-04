@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-
 import "./style.scss";
-
+// import pageNotFound from "../404/pageNotFound";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
 
-const PageNotFound = () => {
+const pageNotFound = () => {
   return (
     <div className="pageNotFound">
       <ContentWrapper>
@@ -16,4 +15,4 @@ const PageNotFound = () => {
   );
 };
 
-export default PageNotFound;
+export default pageNotFound;
