@@ -14,7 +14,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "./style.scss";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
-import logo from "../../assets/movix-logo.svg";
+import logo from "../../assets/movix-logo.png";
 
 const Header = () => {
   const { userEmail, logoutUser } = useUser();
