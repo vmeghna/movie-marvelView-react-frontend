@@ -1,11 +1,11 @@
 import React from "react";
-import { useUser } from "../components/UserContext.jsx";
+import { useUser } from "./UserContext.jsx";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../utils/firebase.js";
 
-const Signup = () => {
+const SignUp = () => {
   const { setFormFields, formFields } = useUser();
   const { displayName, email, password, confirmPassword } = formFields;
   const submitHandler = async (e) => {
@@ -107,4 +107,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUp;
