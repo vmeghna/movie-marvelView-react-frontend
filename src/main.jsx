@@ -18,8 +18,8 @@ import Details from "./pages/details/Details.jsx";
 import SearchResult from "./pages/searchResult/SearchResult.jsx";
 import Explore from "./pages/explore/Explore.jsx";
 import Login from "./components/Login.jsx";
-// import pageNotFound from "./pages/404/pageNotFound.jsx";
-// import SignUp from "./components/SignUp.jsx";
+import PageNotFound from "./pages/404/PageNotFound.jsx";
+import SignUp from "./components/SignUp.jsx";
 import { useUser } from "./components/UserContext.jsx";
 // import PrivateRoute from "./components/PrivateRoute.jsx";
 
@@ -44,9 +44,9 @@ const router = createBrowserRouter(
       />
 
       <Route path="/Login" element={<Login />} />
-      {/* <Route path="/SignUp" element={<SignUp />} /> */}
+      <Route path="/SignUp" element={<SignUp />} />
 
-      <Route path="*" element={<pageNotFound />} />
+      <Route path="*" element={<PageNotFound />} />
     </Route>
   )
 );
@@ -60,18 +60,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </Provider>
   </React.StrictMode>
 );
-
-// <Route path="/" element={<App />}>
-//   <Route path="/" element={<HeroBanner />} />
-//   <Route path="/home" element={<Home />} />
-//   <Route path="/:mediaType/:id" element={<Details />} />
-//   <Route path="/search/:query" element={<SearchResult />} />
-//   <Route path="/explore/:mediaType" element={<Explore />} />
-
-//   <Route path="/search/:query" element={<SearchResult />} />
-
-//   <Route path="/Login" element={<Login />} />
-//   <Route path="/signup" element={<Signup />} />
-
-//   <Route path="*" element={<PageNotFound />} />
-// </Route>

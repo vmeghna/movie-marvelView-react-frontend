@@ -1,11 +1,15 @@
 import React from "react";
 import { useUser } from "./UserContext.jsx";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../utils/firebase.js";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const { setFormFields, formFields } = useUser();
   const { displayName, email, password, confirmPassword } = formFields;
   const submitHandler = async (e) => {
@@ -23,8 +27,8 @@ const SignUp = () => {
         displayName,
       });
       if (userDocRef) {
-        alert("SignUp Success");
-        navigate("/login");
+        console.log(toast(`SignUp success,Move To Login`, "success"));
+        navigate("/Login");
       }
       //   setFormFields(formFields);
       // setFormFields({
@@ -40,9 +44,16 @@ const SignUp = () => {
       console.error("Error code:", err.code);
       console.error("Error details:", err);
       if (err.code === "auth/email-already-in-use") {
-        alert("Email Already Exists Please use alternate Email");
+        console.log(
+          toast(`Email Already Exists..! Please use alternate Email`, "success")
+        );
+
+        // alert("Email Already Exists Please use alternate Email");
       } else if (err.code === "auth/weak-password") {
-        alert("Password must be at least 6 characters long");
+        console.log(
+          toast(`Password must be at least 6 characters long`, "Failure")
+        );
+        // alert("Password must be at least 6 characters long");
       }
     }
   };

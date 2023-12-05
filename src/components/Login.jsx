@@ -43,7 +43,7 @@ const Login = () => {
     const { user } = await signInWithGooglePopup();
     const userDocRef = await createUserDocumentFromAuth(user);
     setUser(user.email, user.displayName);
-    // navigate("/cart");
+    navigate("/Home");
     // console.log(userDocRef.firestore._firestoreClient.user.uid);
   };
 
@@ -133,7 +133,7 @@ const Login = () => {
           Sign In
           {/* {isSignedIn === true ? "Sign In" : "Sign Up"} */}
         </button>
-        <Link to="/signup"> New User? Sign Up Here</Link>
+        <Link to="/signUp"> New User? Sign Up Here</Link>
         <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
           {/* {isSignedIn === true
             ? "  New to Netflix ? Sign up"
